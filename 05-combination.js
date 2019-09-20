@@ -16,7 +16,7 @@ const layout = {
 const combineArrays = (array1, array2) =>
   array2
     .map(l2 => array1.map(l1 => l1 + l2))
-    .reduce((result, arr) => [...result, ...arr]);
+    .reduce((result, arr) => [...result, ...arr], []);
 
 const letterCombinations = digits => {
   // input string validation
