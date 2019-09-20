@@ -12,7 +12,7 @@ function Stack() {
   // Removes and returns the value at the end of the stack
   this.pop = function() {
     const last = this.peek();
-    delete this.storage[this.count--];
+    if (this.count > 0) delete this.storage[this.count--];
     return last;
   };
 
