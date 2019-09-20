@@ -14,9 +14,7 @@ const layout = {
 
 // function that returns all combinations of two arrays
 const combineArrays = (array1, array2) =>
-  array2
-    .map(l2 => array1.map(l1 => l1 + l2))
-    .reduce((result, arr) => [...result, ...arr], []);
+  array2.reduce((result, l2) => [...result, ...array1.map(l1 => l1 + l2)], []);
 
 const letterCombinations = digits => {
   // input string validation
